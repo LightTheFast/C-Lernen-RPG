@@ -1,0 +1,15 @@
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\bin\Debug\net8.0\TextRPG.exe
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\bin\Debug\net8.0\TextRPG.deps.json
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\bin\Debug\net8.0\TextRPG.runtimeconfig.json
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\bin\Debug\net8.0\TextRPG.dll
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\bin\Debug\net8.0\TextRPG.pdb
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.AssemblyInfoInputs.cache
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.AssemblyInfo.cs
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.csproj.CoreCompileInputs.cache
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.sourcelink.json
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.dll
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\refint\TextRPG.dll
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.pdb
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\TextRPG.genruntimeconfig.cache
+C:\Users\IT-User\OneDrive - Campus Bildung und Beruf\Dokumente\Programmierenstuff\C# Lernen\C-Lernen-RPG\TextRPG\obj\Debug\net8.0\ref\TextRPG.dll
