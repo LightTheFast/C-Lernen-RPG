@@ -1,4 +1,5 @@
 ﻿using System;
+using TextRPG.Klassen;
 
 namespace TextRPG
 {
@@ -7,23 +8,56 @@ namespace TextRPG
         static void Main(string[] args){
             // Dein Code startet hier
             int title_input=Title();
-            System.Console.WriteLine("Gebe deinen Namen ein:");
-            string playerName = Console.ReadLine();
+            //System.Console.WriteLine("Gebe deinen Namen ein:");
+            //string playerName = Console.ReadLine();
             Console.WriteLine("Willkommen im TextRPG!");
-            Console.WriteLine($"Hallo, {playerName}!");
+            //Console.WriteLine($"Hallo, {playerName}!");
+            var player = new Player("Light");
+            var enemy = new Slime();
+            player.CharacterDescription();
+            enemy.CharacterDescription();
+            Combat(player, enemy);
 
-            int startingHealth = 100; // erstelle integer für leben
-            Console.WriteLine("Deine Start-Health ist: " + startingHealth);
-        
-            GreetPlayer(playerName); // ruft methode GreetPlayer auf
 
+            static void Combat(Character player, Character enemy){
+                while(true){
+                    bool enemyDead = Attack(player, enemy);
+                    System.Threading.Thread.Sleep(1000); // 1 Sekunde
+                    if (enemyDead){
+                        if (enemy is Enemy e && e.DropItem != null && player is Player p){
+                            p.Inventory.Add(e.DropItem);
+                            Console.WriteLine($"{p.Name} erhält {e.DropItem.Name}!");
+                        }
+                        break;
+                    }
+                    bool playerDead = Attack(enemy, player);
+                    System.Threading.Thread.Sleep(1000); // 1 Sekunde
+                    if (playerDead){
+                        break;
+                    }
+                }
+                if (enemy.Health <= 0)
+                    Console.WriteLine("Gewonnen!");
+                else
+                    Console.WriteLine("Verloren...");
+            }
 
+            static bool Attack(Character attacker, Character defender){
+                defender.Health -= attacker.AttackPower; // schaden berechnen
+                System.Console.WriteLine($"{attacker.Name} greift {defender.Name} an und verursacht {attacker.AttackPower} schaden.\n{defender.Name}'s verbleibende HP: {defender.Health}");
+                    if (defender.Health <= 0) {
+                        System.Console.WriteLine($"{defender.Name} wurde besiegt!");
+                        return true; //verteidiger tot
+                    }
+                    return false; //verteidiger lebt
+            }
+            //int startingHealth = 100; // erstelle integer für leben
+            //Console.WriteLine("Deine Start-Health ist: " + startingHealth);
+            //GreetPlayer(playerName); // ruft methode GreetPlayer auf
         }
-        
-        static void GreetPlayer(string name){ // eine methode 
-            Console.WriteLine($"Willkommen, {name}, in deinem Abenteuer");
-        
-        }
+        //static void GreetPlayer(string name){ // eine methode 
+        //    Console.WriteLine($"Willkommen, {name}, in deinem Abenteuer");
+        //}
 
         static int Title(){ // eine methode mit rückgabe
             Console.WriteLine($"Willkommen in TextRPG!\n(1)Neues Spiel\n(2)Beenden");
@@ -42,41 +76,5 @@ namespace TextRPG
                 }
             }
         }
-    }
-
-    class Character{ // ohne () 
-        public string this.Name {get;set;} // get und set statt __init__
-        public int this.Health {get;set;}
-        public int this.AttackPower {get;set;}
-
-        public void CharacterDescription(){ // public wenn auf werte zugegriffen werden muss
-            Console.WriteLine($"Name: {Name}\n Health: {Health}\n Attack: {AttackPower}")
-        }   
-    }
-
-    class Player : Character{
-        
-        //public int this.beispiel {get;set;} = 1; beispiel für eine neue property
-
-        public Player (string name) : base(name, 100, 20){ //weiss nicht warum ich public player brauche
-        // oder was ich hier hin mache wenn ich keine weiteren initialisierungen habe
-        }
-
-        //public void Beispiel(){
-            //falls ich noch eine neue methode brauche
-        //}
-    }
-
-    class Enemy : Character{
-        
-        //public int this.beispiel {get;set;} = 1; beispiel für eine neue property
-
-        public Enemy (string name) : base(name, 50, 5){ //weiss nicht warum ich public player brauche
-        // oder was ich hier hin mache wenn ich keine weiteren initialisierungen habe
-        }
-
-        //public void Beispiel(){
-            //falls ich noch eine neue methode brauche
-        //}
     }
 }
