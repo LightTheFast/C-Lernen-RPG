@@ -19,6 +19,16 @@ namespace TextRPG.Klassen{
 
     public class Player : Character{
         public List<IItem> Inventory {get;set;} = new List<IItem>();
+        public void ShowInventory(){
+            if (Inventory.Count == 0){
+                System.Console.WriteLine("Dein Inventar ist leer.");
+                return;
+            }
+            System.Console.WriteLine("Dein Inventar:");
+            for (int i = 0; i < Inventory.Count; i++){
+                System.Console.WriteLine($" {i + 1}: {Inventory[i].Name}");
+            }
+        }
         public Player (string name) : base(name, 100, 20){}
     }
     

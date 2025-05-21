@@ -14,10 +14,31 @@ namespace TextRPG
             //Console.WriteLine($"Hallo, {playerName}!");
             var player = new Player("Light");
             var enemy = new Slime();
+            var enemy2 = new Slime();
             player.CharacterDescription();
             enemy.CharacterDescription();
             Combat(player, enemy);
 
+            System.Console.WriteLine("Möchtest du ein Item benutzen?\n(1)Ja\n(2)Nein");
+            string input = Console.ReadLine();
+            if (input == "1"){
+                player.ShowInventory();
+                System.Console.WriteLine("Gib die Nummer des Items ein, welches du verwenden möchtest:");
+                if (int.TryParse(Console.ReadLine(), out int index)){
+                    if (index >=1 && index <= player.Inventory.Count){
+                        var Item = player.Inventory[index -1];
+                        item.Use(player);
+                        player.Inventory.RemoveAt(index -1);
+                    }
+                    else{
+                        System.Console.WriteLine("Ungültige Nummer.");
+                    }
+                }
+                else{
+                    System.Console.WriteLine("Keine gültige Eingabe.");
+                }
+            }
+            Combat(player, enemy2);
 
             static void Combat(Character player, Character enemy){
                 while(true){
